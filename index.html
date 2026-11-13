@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <title>GRAM Miner — Virtual Mining Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="brand"><span class="coin">G</span><div><b>GRAM MINER</b><small>VIRTUAL MINING GAME</small></div></div>
+      <span class="tag">BETA</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">YOUR MINING STATION</p>
+      <div class="miner" aria-hidden="true">🤖</div>
+      <h1 id="balance">0</h1>
+      <p class="muted">Virtual points</p>
+      <div class="rate"><span>⚡</span> <b id="rate">1</b> point per tap</div>
+      <button id="mineBtn" class="primary">⛏️  MINE POINTS</button>
+      <p id="feedback" class="feedback" aria-live="polite">Tap to collect virtual points.</p>
+    </section>
+
+    <section class="stats">
+      <article><small>MINER LEVEL</small><b id="level">1</b></article>
+      <article><small>TOTAL TAPS</small><b id="taps">0</b></article>
+    </section>
+
+    <section class="upgrade">
+      <div><h2>Upgrade miner</h2><p class="muted">Increase points earned per tap.</p></div>
+      <button id="upgradeBtn" class="secondary">Upgrade · <span id="cost">50</span></button>
+    </section>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="mine">⛏️<span>Mine</span></button>
+      <button class="tab" data-tab="invite">👥<span>Invite</span></button>
+      <button class="tab" data-tab="rank">🏆<span>Ranks</span></button>
+    </nav>
+
+    <section id="invitePanel" class="panel hidden">
+      <h2>Invite friends</h2>
+      <p class="muted">Referral rewards are not enabled in this demo.</p>
+      <p class="notice">No payment or wallet connection is required to play.</p>
+    </section>
+    <section id="rankPanel" class="panel hidden">
+      <h2>Leaderboard</h2>
+      <p class="muted">A shared leaderboard will be added after secure server setup.</p>
+    </section>
+
+    <footer>GRAM Miner is an independent virtual-points game. Points are not cryptocurrency, have no cash value, and cannot be withdrawn.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
